@@ -2,7 +2,7 @@
 
 # REPO NAME
 
-This repository contains the source code for  ...
+This repository contains the source code for <REPO_NAME>
 
 ## Prerequisites
 
