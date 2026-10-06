@@ -42,9 +42,13 @@ public final class ServiceMapper {
 
     private final ObjectMapper om = new ObjectMapper();
     private final AdapterConfig config;
+    private final String categoryTable;
+    private final String subcategoryTable;
 
-    public ServiceMapper(AdapterConfig config) {
+    public ServiceMapper(AdapterConfig config, ModelVersion version) {
         this.config = config;
+        this.categoryTable = "category." + version.profile();
+        this.subcategoryTable = "subcategory." + version.profile();
     }
 
     public ObjectNode map(JsonNode src) {
@@ -58,10 +62,10 @@ public final class ServiceMapper {
         putIfPresent(s, "description", description(src));
         putIfPresent(s, "tagline", tagline(src));
         putIfPresent(s, "logo", text(src, "logo"));
-        s.set("scientificDomains", pairs(src.path("scientificDomains"),
-                "scientificDomain", "scientificSubdomain", "scientificDomain", "scientificSubdomain"));
-        s.set("categories", pairs(src.path("categories"),
-                "category", "subcategory", "category", "subcategory"));
+        // The EOSC-Lot-1 model has no subdomain or subcategory.
+        s.set("scientificDomains", singleValues(src.path("scientificDomains"), "scientificDomain",
+                "scientificDomain"));
+        s.set("categories", categories(src.path("categories")));
         s.set("targetUsers", strings(config.list("default.targetUsers")));
         putArrayIfAny(s, ACCESS_MODES, accessModes(src), false);
         s.set("tags", tags(src.path("tags")));
@@ -160,23 +164,38 @@ public final class ServiceMapper {
         return out;
     }
 
-    private ArrayNode pairs(JsonNode arr, String srcKey, String srcSubKey, String field, String subField) {
+    /**
+     * Builds [{key: value}, ...] from the source entries, translating each value through the
+     * given mapping table and removing duplicates that the translation may create.
+     */
+    private ArrayNode singleValues(JsonNode arr, String key, String table) {
         var out = om.createArrayNode();
-        if (arr == null || !arr.isArray()) {
-            return out;
-        }
+        var seen = new LinkedHashSet<String>();
         for (var e : arr) {
-            var main = mapped(field, text(e, srcKey));
-            if (main == null) {
-                continue;
+            var value = mapped(table, text(e, key));
+            if (value != null && seen.add(value)) {
+                out.addObject().put(key, value);
             }
-            var n = om.createObjectNode();
-            n.put(srcKey, main);
-            var sub = mapped(subField, text(e, srcSubKey));
-            if (sub != null) {
-                n.put(srcSubKey, sub);
+        }
+        return out;
+    }
+
+    /**
+     * Translates each source category. A subcategory entry, when one exists, decides the result;
+     * otherwise the category entry applies (or the value passes through unchanged).
+     */
+    private ArrayNode categories(JsonNode arr) {
+        var out = om.createArrayNode();
+        var seen = new LinkedHashSet<String>();
+        for (var e : arr) {
+            var sub = text(e, "subcategory");
+            var value = sub == null ? null : config.mapIfPresent(subcategoryTable, sub);
+            if (value == null) {
+                value = mapped(categoryTable, text(e, "category"));
             }
-            out.add(n);
+            if (value != null && seen.add(value)) {
+                out.addObject().put("category", value);
+            }
         }
         return out;
     }

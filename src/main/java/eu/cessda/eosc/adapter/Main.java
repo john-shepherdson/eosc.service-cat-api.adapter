@@ -37,23 +37,23 @@ public final class Main {
 
     private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 
-    private static final String DEFAULT_SCHEMA = "https://srvcat.cloud.cesnet.cz/openapi.json";
     private static final String USAGE = """
             Usage: java -jar eosc-adapter.jar --source <url|file> [options]
               --source  <url|file>  EOSC Beyond service list (required)
-              --schema  <url|file>  Target OpenAPI document (default: %s)
+              --model-version <v>   EOSC-Lot-1 model release: %s
+                                    (default: latest)
               --config  <file>      Properties overriding adapter.properties
               --output  <file>      Output file name (default: services.json). A relative name is
                                     placed in the outputs directory; an absolute path is used as is
               --outdir  <dir>       Outputs directory (default: outputs)
               --strict              Exit with status 2 if any service was rejected
-            """.formatted(DEFAULT_SCHEMA);
+            """.formatted(ModelVersion.supported());
 
     private Main() {}
 
     public static void main(String[] args) throws Exception {
         String source = null;
-        String schema = DEFAULT_SCHEMA;
+        var modelVersion = ModelVersion.latest();
         Path config = null;
         Path output = Path.of("services.json");
         Path outDir = Path.of("outputs");
@@ -62,7 +62,7 @@ public final class Main {
         while (it.hasNext()) {
             switch (it.next()) {
                 case "--source" -> source = value(it);
-                case "--schema" -> schema = value(it);
+                case "--model-version" -> modelVersion = parseVersion(value(it));
                 case "--config" -> config = Path.of(value(it));
                 case "--output" -> output = Path.of(value(it));
                 case "--outdir" -> outDir = Path.of(value(it));
@@ -75,7 +75,8 @@ public final class Main {
         }
 
         var om = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
-        var adapter = new Adapter(AdapterConfig.load(config), new BundleValidator(read(om, schema)));
+        LOG.info("Targeting the EOSC-Lot-1 service catalogue model {}", modelVersion.label());
+        var adapter = new Adapter(AdapterConfig.load(config), modelVersion);
         var result = adapter.convert(read(om, source));
 
         var target = output.isAbsolute() ? output : outDir.resolve(output);
@@ -98,6 +99,16 @@ public final class Main {
             usageAndExit();
         }
         return it.next();
+    }
+
+    private static ModelVersion parseVersion(String text) {
+        try {
+            return ModelVersion.parse(text);
+        } catch (IllegalArgumentException e) {
+            LOG.error(e.getMessage());
+            System.exit(1);
+            return null;
+        }
     }
 
     private static void usageAndExit() {

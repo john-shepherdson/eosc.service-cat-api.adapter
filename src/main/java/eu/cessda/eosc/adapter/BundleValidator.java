@@ -25,7 +25,7 @@ import com.networknt.schema.JsonSchemaFactory;
 import com.networknt.schema.NonValidationKeyword;
 import com.networknt.schema.SpecVersion;
 
-/** Validates bundles against EOSCServiceBundle in the target OpenAPI document. */
+/** Validates bundles against ServiceBundle in the target OpenAPI document. */
 public final class BundleValidator {
 
     private static final String COMPONENTS = "components";
@@ -36,7 +36,7 @@ public final class BundleValidator {
         var root = openApi.deepCopy();
         ((com.fasterxml.jackson.databind.node.ObjectNode) root).removeAll();
         var wrapper = (com.fasterxml.jackson.databind.node.ObjectNode) root;
-        wrapper.put("$ref", "#/components/schemas/EOSCServiceBundle");
+        wrapper.put("$ref", "#/components/schemas/ServiceBundle");
         wrapper.set(COMPONENTS, openApi.get(COMPONENTS));
         // "components" only holds the definitions reached through $ref; it is not a validation keyword.
         var metaSchema = JsonMetaSchema.builder(JsonMetaSchema.getV202012())

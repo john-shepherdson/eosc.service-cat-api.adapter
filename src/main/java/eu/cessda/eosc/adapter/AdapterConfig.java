@@ -88,4 +88,22 @@ public final class AdapterConfig {
         }
         return get(key);
     }
+
+    /**
+     * Like {@link #map} but returns null when there is no entry (or the entry is empty), so the
+     * caller can fall back to another table.
+     */
+    public String mapIfPresent(String field, String value) {
+        return get("map." + field + "." + value);
+    }
+
+    /** All entries of one mapping table: map.&lt;field&gt;.&lt;sourceValue&gt; to targetValue. */
+    public java.util.Map<String, String> table(String field) {
+        var prefix = "map." + field + ".";
+        var out = new java.util.TreeMap<String, String>();
+        props.stringPropertyNames().stream()
+                .filter(k -> k.startsWith(prefix))
+                .forEach(k -> out.put(k.substring(prefix.length()), props.getProperty(k).trim()));
+        return out;
+    }
 }
