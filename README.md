@@ -1,6 +1,10 @@
 # EOSC Beyond Service Catalogue API Adapter
 
+<!-- markdownlint-disable MD013 -->
+
 [![SQAaaS badge shields.io](https://img.shields.io/badge/sqaaas%20software-silver-lightgrey)](https://sqaaas.eosc-synergy.eu/full-assessment/report/https://raw.githubusercontent.com/eosc-synergy/eosc.service-cat-api.adapter.git.assess.sqaaas/main/.report/assessment_output.json "SQAaaS silver badge achieved")
+
+<!-- markdownlint-enable MD013 -->
 
 This repository contains the source code for a Java adapter that converts
 service descriptions from the
@@ -45,7 +49,8 @@ category vocabulary.
 
    ```bash
    java -jar target/eosc-adapter-x.x.x.jar \
-     --source https://service-catalogue-staging.beyond.cessda.eu/api/service/all \ 
+     --source
+      https://service-catalogue-staging.beyond.cessda.eu/api/service/all \
      --output services.json
    ```
 
@@ -69,7 +74,8 @@ rejected services are written to stderr.
 
    ```bash
    java -jar target/eosc-adapter-x.x.x.jar \
-     --source https://service-catalogue-staging.beyond.cessda.eu/api/service/all \ 
+     --source
+      https://service-catalogue-staging.beyond.cessda.eu/api/service/all \
      --output v1-CESSDA-services.json --model-version v1.0.0
    ```
 
