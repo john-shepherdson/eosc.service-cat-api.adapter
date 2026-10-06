@@ -16,6 +16,7 @@
  */
 package eu.cessda.eosc.adapter;
 
+import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -23,7 +24,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-/** Converts a whole EOSC Beyond response into a validated ServicesResponse. */
+/** Converts a whole EOSC Beyond response into a validated PagingServiceBundle. */
 public final class Adapter {
 
     /** The converted document plus the ids (with messages) of services that were excluded. */
@@ -33,9 +34,9 @@ public final class Adapter {
     private final ServiceMapper mapper;
     private final BundleValidator validator;
 
-    public Adapter(AdapterConfig config, BundleValidator validator) {
-        this.mapper = new ServiceMapper(config);
-        this.validator = validator;
+    public Adapter(AdapterConfig config, ModelVersion version) throws IOException {
+        this.mapper = new ServiceMapper(config, version);
+        this.validator = new BundleValidator(version.loadSchema());
     }
 
     public Result convert(JsonNode source) {
