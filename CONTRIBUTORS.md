@@ -1,4 +1,4 @@
-# <REPO_NAME>
+# eosc.service-cat-api.adapter
 
 ## Contributors
 

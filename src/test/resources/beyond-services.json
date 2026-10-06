@@ -1,0 +1,1063 @@
+{
+    "total": 7,
+    "from": 0,
+    "to": 7,
+    "results": [
+        {
+            "id": "service/S1Ux8C00",
+            "name": "CESSDA Data Catalogue",
+            "urls": [
+                "https://datacatalogue.cessda.eu/"
+            ],
+            "alternativePIDs": null,
+            "nodePID": "21.T15999/CESSDA",
+            "description": "<p>The CESSDA Data Catalogue contains the metadata of all data in the holdings of CESSDA service providers. It is a one-stop-shop for search and discovery, enabling effective access to European research data for researchers. Details of over 40, 000 data collections are listed. These are harvested from fifteen different CESSDA Service Providers.</p>",
+            "publishingDate": "2026-03-15",
+            "type": "Service",
+            "resourceOwner": "provider/ZE281w00",
+            "serviceProviders": [
+                "provider/ZE281w00"
+            ],
+            "webpage": "https://www.cessda.eu/Tools/Data-Catalogue",
+            "logo": "https://www.cessda.eu/Images/Service-logos/dc-std.svg",
+            "scientificDomains": [
+                {
+                    "scientificDomain": "scientific_domain-social_sciences",
+                    "scientificSubdomain": "scientific_subdomain-social_sciences-other_social_sciences"
+                }
+            ],
+            "categories": [
+                {
+                    "category": "category-aggregators_and_integrators-aggregators_and_integrators",
+                    "subcategory": "subcategory-aggregators_and_integrators-aggregators_and_integrators-data"
+                }
+            ],
+            "accessTypes": "access_type-virtual",
+            "tags": [
+                "metadata",
+                "Data-discovery",
+                "Data-catalogue",
+                "DDI",
+                "SSHOC"
+            ],
+            "jurisdiction": "ds_jurisdiction-global",
+            "trl": "trl-8",
+            "termsOfUse": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "privacyPolicy": "https://www.cessda.eu/Privacy-policy",
+            "accessPolicy": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "orderType": "order_type-open_access",
+            "order": "https://datacatalogue.cessda.eu/",
+            "mainContact": {
+                "firstName": "Alen",
+                "lastName": "Vodopijevec",
+                "email": "eosc-node-admin@cessda.eu",
+                "role": "credit-software",
+                "PIDs": [
+                    {
+                        "mainContactPID": "https://orcid.org/0000-0003-1003-0281",
+                        "mainContactPIDScheme": "ORCID"
+                    }
+                ],
+                "affiliations": [
+                    {
+                        "affiliationName": "Consortium of European Social Science Data Archives",
+                        "affiliationIdentifier": {
+                            "mainContactID": "https://ror.org/02wg9xc72",
+                            "mainContactType": "ERIC"
+                        }
+                    }
+                ]
+            },
+            "publicContacts": [
+                "support@cessda.eu"
+            ]
+        },
+        {
+            "id": "service/YakRKr00",
+            "name": "CESSDA Data Archiving Guide",
+            "urls": [
+                "https://dag.cessda.eu/"
+            ],
+            "alternativePIDs": null,
+            "nodePID": "21.T15999/CESSDA",
+            "description": "<p>The Data Archiving Guide (DAG) is designed to support the work of employees of data repositories by providing a general understanding of the full range of activities a data repository performs. Although the DAG was developed for and by employees of social science data archives, a lot of information applies to other archives as well and is equally useful for archiving professionals from other disciplines.</p>",
+            "publishingDate": "2026-03-15",
+            "type": "Service",
+            "resourceOwner": "provider/ZE281w00",
+            "serviceProviders": [
+                "provider/ZE281w00"
+            ],
+            "webpage": "https://www.cessda.eu/Training/DAG",
+            "logo": "https://www.cessda.eu/Images/Service-logos/DAG.svg",
+            "scientificDomains": [
+                {
+                    "scientificDomain": "scientific_domain-social_sciences",
+                    "scientificSubdomain": "scientific_subdomain-social_sciences-other_social_sciences"
+                }
+            ],
+            "categories": [
+                {
+                    "category": "category-training_and_support-consultancy_and_support",
+                    "subcategory": "subcategory-training_and_support-consultancy_and_support-other"
+                }
+            ],
+            "accessTypes": [
+                "access_type-virtual"
+            ],
+            "tags": [
+                "Data-archive",
+                "Data-repository",
+                "OAIS"
+            ],
+            "jurisdiction": "ds_jurisdiction-global",
+            "trl": "trl-8",
+            "termsOfUse": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "privacyPolicy": "https://www.cessda.eu/Privacy-Policy",
+            "accessPolicy": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "orderType": "order_type-fully_open_access",
+            "order": "https://www.cessda.eu/Training/DAG",
+            "mainContact": {
+                "firstName": "Alen",
+                "lastName": "Vodopijevec",
+                "email": "eosc-node-admin@cessda.eu",
+                "role": "credit-software",
+                "PIDs": [
+                    {
+                        "mainContactPID": "https://orcid.org/0000-0003-1003-0281",
+                        "mainContactPIDScheme": "ORCID"
+                    }
+                ],
+                "affiliations": [
+                    {
+                        "affiliationName": "Consortium of European Social Science Data Archives",
+                        "affiliationIdentifier": {
+                            "mainContactID": "https://ror.org/02wg9xc72",
+                            "mainContactType": "ERIC"
+                        }
+                    }
+                ]
+            },
+            "publicContacts": [
+                "support@cessda.eu"
+            ]
+        },
+        {
+            "id": "service/P10Zgj00",
+            "name": "CESSDA European Language Social Science Thesaurus",
+            "urls": [
+                "https://thesauri.cessda.eu/elsst-6/en/"
+            ],
+            "alternativePIDs": null,
+            "nodePID": "21.T15999/CESSDA",
+            "description": "<p>ELSST is a broad-based, multilingual thesaurus for the social sciences. It is owned and published by the Consortium of European Social Science Data Archives (CESSDA) and its national Service Providers. The thesaurus consists of over 3,300 concepts and covers the core social science disciplines: politics, sociology, economics, education, law, crime, demography, health, employment, information and communication technology and, increasingly, environmental science. ELSST is used for data discovery within CESSDA and facilitates access to data resources across Europe, independent of domain, resource, language or vocabulary. ELSST is currently available in 15 languages: Dutch, Czech, English, Finnish, French, German, Greek, Hungarian, Icelandic, Lithuanian, Norwegian, Romanian, Slovenian, Spanish, and Swedish.</p>",
+            "publishingDate": "2026-03-15",
+            "type": "Service",
+            "resourceOwner": "provider/ZE281w00",
+            "serviceProviders": [
+                "provider/ZE281w00"
+            ],
+            "webpage": "https://www.cessda.eu/Tools/ELSST-Thesaurus",
+            "logo": "https://www.cessda.eu/Images/Service-logos/elsst-std.svg",
+            "scientificDomains": [
+                {
+                    "scientificDomain": "scientific_domain-social_sciences",
+                    "scientificSubdomain": "scientific_subdomain-social_sciences-other_social_sciences"
+                }
+            ],
+            "categories": [
+                {
+                    "category": "category-sharing_and_discovery-software",
+                    "subcategory": "subcategory-sharing_and_discovery-software-software_repository"
+                }
+            ],
+            "accessTypes": "access_type-virtual",
+            "tags": [
+                "Thesaurus",
+                "Ontology",
+                "Resource-Discovery",
+                "SSHOC"
+            ],
+            "jurisdiction": "ds_jurisdiction-global",
+            "trl": "trl-8",
+            "termsOfUse": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "privacyPolicy": "https://www.cessda.eu/Privacy-policy",
+            "accessPolicy": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "orderType": "order_type-fully_open_access",
+            "order": "https://thesauri.cessda.eu/elsst-6/en/",
+            "mainContact": {
+                "firstName": "Alen",
+                "lastName": "Vodopijevec",
+                "email": "eosc-node-admin@cessda.eu",
+                "role": "credit-software",
+                "PIDs": [
+                    {
+                        "mainContactPID": "https://orcid.org/0000-0003-1003-0281",
+                        "mainContactPIDScheme": "ORCID"
+                    }
+                ],
+                "affiliations": [
+                    {
+                        "affiliationName": "Consortium of European Social Science Data Archives",
+                        "affiliationIdentifier": {
+                            "mainContactID": "https://ror.org/02wg9xc72",
+                            "mainContactType": "ERIC"
+                        }
+                    }
+                ]
+            },
+            "publicContacts": [
+                "support@cessda.eu"
+            ]
+        },
+        {
+            "id": "service/pCVouY00",
+            "name": "CESSDA Data Management Expert Guide",
+            "urls": [
+                "https://dmeg.cessda.eu/"
+            ],
+            "alternativePIDs": null,
+            "nodePID": "21.T15999/CESSDA",
+            "description": "<p>The DMEG is designed by European experts to help social science researchers make their research data Findable, Accessible, Interoperable and Reusable (FAIR). You will be guided by different European experts who are - on a daily basis - busy ensuring long-term access to valuable social science datasets, available for discovery and reuse at one of the CESSDA social science data archives. You can download the full DMEG for your personal study offline (DOI: 10.5281/zenodo.3820473). PDFs for every single chapter are also available for being printed as handouts for training.</p>",
+            "publishingDate": "2026-03-15",
+            "type": "Service",
+            "resourceOwner": "provider/ZE281w00",
+            "serviceProviders": [
+                "provider/ZE281w00"
+            ],
+            "webpage": "https://www.cessda.eu/Training/DMEG",
+            "logo": "https://www.cessda.eu/Images/Service-logos/datamanagementexpertguide.svg",
+            "scientificDomains": [
+                {
+                    "scientificDomain": "scientific_domain-social_sciences",
+                    "scientificSubdomain": "scientific_subdomain-social_sciences-other_social_sciences"
+                }
+            ],
+            "categories": [
+                {
+                    "category": "category-training_and_support-education_and_training",
+                    "subcategory": "subcategory-training_and_support-education_and_training-required_training"
+                }
+            ],
+            "accessTypes": "access_type-virtual",
+            "tags": [
+                "Data-management",
+                "SSHOC",
+                "FAIR",
+                "Data-publication",
+                "Data-archive"
+            ],
+            "jurisdiction": "ds_jurisdiction-global",
+            "trl": "trl-8",
+            "termsOfUse": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "privacyPolicy": "https://www.cessda.eu/Privacy-policy",
+            "accessPolicy": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "orderType": "order_type-fully_open_access",
+            "order": "https://dmeg.cessda.eu/",
+            "mainContact": {
+                "firstName": "Alen",
+                "lastName": "Vodopijevec",
+                "email": "eosc-node-admin@cessda.eu",
+                "role": "credit-software",
+                "PIDs": [
+                    {
+                        "mainContactPID": "https://orcid.org/0000-0003-1003-0281",
+                        "mainContactPIDScheme": "ORCID"
+                    }
+                ],
+                "affiliations": [
+                    {
+                        "affiliationName": "Consortium of European Social Science Data Archives",
+                        "affiliationIdentifier": {
+                            "mainContactID": "https://ror.org/02wg9xc72",
+                            "mainContactType": "ERIC"
+                        }
+                    }
+                ]
+            },
+            "publicContacts": [
+                "support@cessda.eu"
+            ]
+        },
+        {
+            "id": "service/qnmegF00",
+            "name": "CESSDA Vocabulary Service",
+            "urls": [
+                "https://www.cessda.eu/Tools/Vocabulary-Service"
+            ],
+            "alternativePIDs": null,
+            "nodePID": "21.T15999/CESSDA",
+            "description": "<p>The Vocabulary Service offers users the ability to discover, browse, and download controlled vocabularies in various languages. Downloads can be done in SKOS, HTML, and PDF formats, in the chosen languages. The Vocabulary service also allows communities and organisations referred to as Agency to host and publish their own vocabularies for users to search and download. The communities have roles such as Editor, which enables them to create, manage, and translate the vocabularies. The editor also includes an access and user management interface and allows versioning with persistent identifiers and citation of the Controlled Vocabularies (CVs). The following link, <a href=\"https://docs.tech.cessda.eu/content-management/cvs-agency.html\">https://docs.tech.cessda.eu/content-management/cvs-agency.html</a>, provides guidance on registering a community as an Agency. Many of the vocabularies have been developed and maintained by the DDI Alliance and its Controlled Vocabularies Working Group. The Data Documentation Initiative (DDI) is a global standard used to describe data generated by surveys and other observational methods in social, behavioural, economic, and health sciences. Non-English versions of the vocabularies have been supplied by CESSDA members and associated organisations in different countries. The vocabularies allow for data descriptions to be harmonised, such as in the CESSDA Data Catalogue (CDC) service. As DDI vocabularies are utilised worldwide, organisations that want to produce and maintain a language not currently included are encouraged to do so. The same applies to the CESSDA Topic Classification vocabulary. Any interested organisation is encouraged to submit their contact information to the DDI Controlled Vocabularies Working Group or via the \"Send feedback\" button on any page in the CESSDA Vocabulary Service. The service is also available through REST API at https://api.tech.cessda.eu/ by selecting the service in the dropbox.</p>",
+            "publishingDate": "2026-03-15",
+            "type": "Service",
+            "resourceOwner": "provider/ZE281w00",
+            "serviceProviders": [
+                "provider/ZE281w00"
+            ],
+            "webpage": "https://www.cessda.eu/Tools/Vocabulary-Service",
+            "logo": "https://vocabularies.cessda.eu/content/images/logo/cessda_logo_cvs_prod.png",
+            "scientificDomains": [
+                {
+                    "scientificDomain": "scientific_domain-social_sciences",
+                    "scientificSubdomain": "scientific_subdomain-social_sciences-other_social_sciences"
+                }
+            ],
+            "categories": [
+                {
+                    "category": "category-processing_and_analysis-data_management",
+                    "subcategory": "subcategory-processing_and_analysis-data_management-discovery"
+                }
+            ],
+            "accessTypes": "access_type-virtual",
+            "tags": [
+                "Controlled-Vocabularies",
+                "Multilingual-Vocabulary-service",
+                " Harmonised-data-descriptions",
+                "Vocabulary-management"
+            ],
+            "jurisdiction": "ds_jurisdiction-global",
+            "trl": "trl-8",
+            "termsOfUse": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "privacyPolicy": "https://www.cessda.eu/Privacy-Policy",
+            "accessPolicy": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "orderType": "order_type-fully_open_access",
+            "order": "https://vocabularies.cessda.eu/",
+            "mainContact": {
+                "firstName": "Alen",
+                "lastName": "Vodopijevec",
+                "email": "eosc-node-admin@cessda.eu",
+                "role": "credit-software",
+                "PIDs": [
+                    {
+                        "mainContactPID": "https://orcid.org/0000-0003-1003-0281",
+                        "mainContactPIDScheme": "ORCID"
+                    }
+                ],
+                "affiliations": [
+                    {
+                        "affiliationName": "Consortium of European Social Science Data Archives",
+                        "affiliationIdentifier": {
+                            "mainContactID": "https://ror.org/02wg9xc72",
+                            "mainContactType": "ERIC"
+                        }
+                    }
+                ]
+            },
+            "publicContacts": [
+                "support@cessda.eu"
+            ]
+        },
+        {
+            "id": "service/ss8ceo00",
+            "name": "CESSDA Workspace",
+            "urls": [
+                "https://workspace.cessda.eu/"
+            ],
+            "alternativePIDs": null,
+            "nodePID": "21.T15999/CESSDA",
+            "description": "<p>Secure collaboration for the CESSDA community</p>",
+            "publishingDate": "2026-08-19",
+            "type": "Service",
+            "resourceOwner": "provider/ZE281w00",
+            "serviceProviders": [
+                "provider/ZE281w00"
+            ],
+            "webpage": "https://workspace.cessda.eu/",
+            "logo": "https://www.cessda.eu/var/cessda/storage/images/946-48-eng-GB/Home.png",
+            "scientificDomains": [
+                {
+                    "scientificDomain": "scientific_domain-social_sciences",
+                    "scientificSubdomain": "scientific_subdomain-social_sciences-other_social_sciences"
+                }
+            ],
+            "categories": [
+                {
+                    "category": "category-aggregators_and_integrators-aggregators_and_integrators",
+                    "subcategory": "subcategory-aggregators_and_integrators-aggregators_and_integrators-data"
+                }
+            ],
+            "accessTypes": "access_type-virtual",
+            "tags": [
+                "storage",
+                "collaboration"
+            ],
+            "jurisdiction": "ds_jurisdiction-global",
+            "trl": "trl-7",
+            "termsOfUse": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "privacyPolicy": "https://www.cessda.eu/Privacy-policy",
+            "accessPolicy": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "orderType": "order_type-open_access",
+            "order": "https://workspace.cessda.eu/",
+            "mainContact": {
+                "firstName": "Alen",
+                "lastName": "Vodopijevec",
+                "email": "eosc-node-admin@cessda.eu",
+                "role": "credit-software",
+                "PIDs": [
+                    {
+                        "mainContactPID": "https://orcid.org/0000-0003-1003-0281",
+                        "mainContactPIDScheme": "ORCID"
+                    }
+                ],
+                "affiliations": [
+                    {
+                        "affiliationName": "Consortium of European Social Science Data Archives",
+                        "affiliationIdentifier": {
+                            "mainContactID": "https://ror.org/02wg9xc72",
+                            "mainContactType": "ERIC"
+                        }
+                    }
+                ]
+            },
+            "publicContacts": [
+                "support@cessda.eu"
+            ]
+        },
+        {
+            "id": "service/YgC1HE00",
+            "name": "CESSDA Metadata Validator",
+            "urls": [
+                "https://www.cessda.eu/Tools/Metadata-Validator"
+            ],
+            "alternativePIDs": null,
+            "nodePID": "21.T15999/CESSDA",
+            "description": "<p>The CESSDA Metadata Validator (CMV) validates DDI metadata records used by CESSDA's tools and services, against a given <a href=\"https://ddialliance.org/learn/resources/ddi-profiles\">DDI Profile</a>. These DDI Profiles are developed and maintained by the <a href=\"https://www.cessda.eu/Metadata-Office\">Metadata Office</a>. They contain the rules and constraints that metadata records need to follow to be compatible with the <a href=\"https://www.cessda.eu/Tools/Data-Catalogue\">CESSDA Data Catalogue</a> and the European Question Bank.&nbsp;</p>",
+            "publishingDate": "2026-03-15",
+            "type": "Service",
+            "resourceOwner": "provider/ZE281w00",
+            "serviceProviders": [
+                "provider/ZE281w00"
+            ],
+            "webpage": "https://cmv.cessda.eu/#!validation",
+            "logo": "https://drive.google.com/file/d/19I8rD_jl3NhHP8oQWUolAuyA9E7te2I_/view",
+            "scientificDomains": [
+                {
+                    "scientificDomain": "scientific_domain-social_sciences",
+                    "scientificSubdomain": "scientific_subdomain-social_sciences-other_social_sciences"
+                }
+            ],
+            "categories": [
+                {
+                    "category": "category-aggregators_and_integrators-aggregators_and_integrators",
+                    "subcategory": "subcategory-aggregators_and_integrators-aggregators_and_integrators-applications"
+                }
+            ],
+            "accessTypes": "access_type-virtual",
+            "tags": [
+                "DDI",
+                "Validation",
+                "Metadata"
+            ],
+            "jurisdiction": "ds_jurisdiction-global",
+            "trl": "trl-8",
+            "termsOfUse": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "privacyPolicy": "https://www.cessda.eu/Privacy-policy",
+            "accessPolicy": "https://www.cessda.eu/Acceptable-Use-Policy",
+            "orderType": "order_type-fully_open_access",
+            "order": "https://www.cessda.eu/Tools/Metadata-Validator",
+            "mainContact": {
+                "firstName": "Alen",
+                "lastName": "Vodopijevec",
+                "email": "eosc-node-admin@cessda.eu",
+                "role": "credit-software",
+                "PIDs": [
+                    {
+                        "mainContactPID": "https://orcid.org/0000-0003-1003-0281",
+                        "mainContactPIDScheme": "ORCID"
+                    }
+                ],
+                "affiliations": [
+                    {
+                        "affiliationName": "Consortium of European Social Science Data Archives",
+                        "affiliationIdentifier": {
+                            "mainContactID": "https://ror.org/02wg9xc72",
+                            "mainContactType": "ERIC"
+                        }
+                    }
+                ]
+            },
+            "publicContacts": [
+                "support@cessda.eu"
+            ]
+        }
+    ],
+    "facets": [
+        {
+            "field": "access_policy",
+            "label": "Access Policy",
+            "values": [
+                {
+                    "value": "https://www.cessda.eu/Acceptable-Use-Policy",
+                    "count": 7,
+                    "label": "Https://www.cessda.eu/Acceptable-Use-Policy"
+                }
+            ]
+        },
+        {
+            "field": "access_types",
+            "label": "Access Type",
+            "values": [
+                {
+                    "value": "access_type-virtual",
+                    "count": 1,
+                    "label": "Virtual"
+                }
+            ]
+        },
+        {
+            "field": "alternative_pids",
+            "label": "Alternative PIDs",
+            "values": []
+        },
+        {
+            "field": "catalogue_id",
+            "label": "Catalogue ID",
+            "values": []
+        },
+        {
+            "field": "categories",
+            "label": "Category",
+            "values": [
+                {
+                    "value": "category-aggregators_and_integrators-aggregators_and_integrators",
+                    "count": 3,
+                    "label": "Aggregators & Integrators"
+                },
+                {
+                    "value": "category-processing_and_analysis-data_management",
+                    "count": 1,
+                    "label": "Data Management"
+                },
+                {
+                    "value": "category-sharing_and_discovery-software",
+                    "count": 1,
+                    "label": "Software"
+                },
+                {
+                    "value": "category-training_and_support-consultancy_and_support",
+                    "count": 1,
+                    "label": "Consultancy & Support"
+                },
+                {
+                    "value": "category-training_and_support-education_and_training",
+                    "count": 1,
+                    "label": "Education & Training"
+                }
+            ]
+        },
+        {
+            "field": "contacts",
+            "label": "Public Contacts",
+            "values": [
+                {
+                    "value": "support@cessda.eu",
+                    "count": 7,
+                    "label": "Support@cessda.eu"
+                }
+            ]
+        },
+        {
+            "field": "jurisdiction",
+            "label": "Jurisdiction",
+            "values": [
+                {
+                    "value": "ds_jurisdiction-global",
+                    "count": 7,
+                    "label": "Global"
+                }
+            ]
+        },
+        {
+            "field": "logo",
+            "label": "Logo",
+            "values": [
+                {
+                    "value": "https://drive.google.com/file/d/19I8rD_jl3NhHP8oQWUolAuyA9E7te2I_/view",
+                    "count": 1,
+                    "label": "Https://drive.google.com/file/d/19I8rD Jl3NhHP8oQWUolAuyA9E7te2I /view"
+                },
+                {
+                    "value": "https://vocabularies.cessda.eu/content/images/logo/cessda_logo_cvs_prod.png",
+                    "count": 1,
+                    "label": "Https://vocabularies.cessda.eu/content/images/logo/cessda Logo Cvs Prod.png"
+                },
+                {
+                    "value": "https://www.cessda.eu/Images/Service-logos/DAG.svg",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Images/Service-Logos/DAG.svg"
+                },
+                {
+                    "value": "https://www.cessda.eu/Images/Service-logos/datamanagementexpertguide.svg",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Images/Service-Logos/datamanagementexpertguide.svg"
+                },
+                {
+                    "value": "https://www.cessda.eu/Images/Service-logos/dc-std.svg",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Images/Service-Logos/dc-Std.svg"
+                },
+                {
+                    "value": "https://www.cessda.eu/Images/Service-logos/elsst-std.svg",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Images/Service-Logos/elsst-Std.svg"
+                },
+                {
+                    "value": "https://www.cessda.eu/var/cessda/storage/images/946-48-eng-GB/Home.png",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/var/cessda/storage/images/946-48-Eng-GB/Home.png"
+                }
+            ]
+        },
+        {
+            "field": "main_contact_role",
+            "label": "Main Contact Role",
+            "values": [
+                {
+                    "value": "credit-software",
+                    "count": 7,
+                    "label": "Software"
+                }
+            ]
+        },
+        {
+            "field": "name",
+            "label": "Service Name",
+            "values": [
+                {
+                    "value": "CESSDA Data Archiving Guide",
+                    "count": 1,
+                    "label": "CESSDA Data Archiving Guide"
+                },
+                {
+                    "value": "CESSDA Data Catalogue",
+                    "count": 1,
+                    "label": "CESSDA Data Catalogue"
+                },
+                {
+                    "value": "CESSDA Data Management Expert Guide",
+                    "count": 1,
+                    "label": "CESSDA Data Management Expert Guide"
+                },
+                {
+                    "value": "CESSDA European Language Social Science Thesaurus",
+                    "count": 1,
+                    "label": "CESSDA European Language Social Science Thesaurus"
+                },
+                {
+                    "value": "CESSDA Metadata Validator",
+                    "count": 1,
+                    "label": "CESSDA Metadata Validator"
+                },
+                {
+                    "value": "CESSDA Vocabulary Service",
+                    "count": 1,
+                    "label": "CESSDA Vocabulary Service"
+                },
+                {
+                    "value": "CESSDA Workspace",
+                    "count": 1,
+                    "label": "CESSDA Workspace"
+                }
+            ]
+        },
+        {
+            "field": "node",
+            "label": "Node",
+            "values": [
+                {
+                    "value": "21.T15999/CESSDA",
+                    "count": 7,
+                    "label": "CESSDA"
+                }
+            ]
+        },
+        {
+            "field": "order_link",
+            "label": "Order",
+            "values": [
+                {
+                    "value": "https://datacatalogue.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://datacatalogue.cessda.eu/"
+                },
+                {
+                    "value": "https://dmeg.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://dmeg.cessda.eu/"
+                },
+                {
+                    "value": "https://thesauri.cessda.eu/elsst-6/en/",
+                    "count": 1,
+                    "label": "Https://thesauri.cessda.eu/elsst-6/en/"
+                },
+                {
+                    "value": "https://vocabularies.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://vocabularies.cessda.eu/"
+                },
+                {
+                    "value": "https://workspace.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://workspace.cessda.eu/"
+                },
+                {
+                    "value": "https://www.cessda.eu/Tools/Metadata-Validator",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Tools/Metadata-Validator"
+                },
+                {
+                    "value": "https://www.cessda.eu/Training/DAG",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Training/DAG"
+                }
+            ]
+        },
+        {
+            "field": "order_type",
+            "label": "Order Type",
+            "values": [
+                {
+                    "value": "order_type-fully_open_access",
+                    "count": 5,
+                    "label": "Fully Open Access"
+                },
+                {
+                    "value": "order_type-open_access",
+                    "count": 2,
+                    "label": "Open Access"
+                }
+            ]
+        },
+        {
+            "field": "privacy_policy",
+            "label": "Privacy Policy",
+            "values": [
+                {
+                    "value": "https://www.cessda.eu/Privacy-policy",
+                    "count": 5,
+                    "label": "Https://www.cessda.eu/Privacy-Policy"
+                },
+                {
+                    "value": "https://www.cessda.eu/Privacy-Policy",
+                    "count": 2,
+                    "label": "Https://www.cessda.eu/Privacy-Policy"
+                }
+            ]
+        },
+        {
+            "field": "resource_owner",
+            "label": "Resource Owner",
+            "values": [
+                {
+                    "value": "provider/ZE281w00",
+                    "count": 7,
+                    "label": "Consortium of European Social Science Data Archives"
+                }
+            ]
+        },
+        {
+            "field": "scientific_domains",
+            "label": "Scientific Domain",
+            "values": [
+                {
+                    "value": "scientific_domain-social_sciences",
+                    "count": 7,
+                    "label": "Social Sciences"
+                }
+            ]
+        },
+        {
+            "field": "scientific_subdomains",
+            "label": "Scientific Subdomain",
+            "values": [
+                {
+                    "value": "scientific_subdomain-social_sciences-other_social_sciences",
+                    "count": 7,
+                    "label": "Other Social Sciences"
+                }
+            ]
+        },
+        {
+            "field": "service_providers",
+            "label": "Service Provider",
+            "values": [
+                {
+                    "value": "provider/ZE281w00",
+                    "count": 7,
+                    "label": "Consortium of European Social Science Data Archives"
+                }
+            ]
+        },
+        {
+            "field": "subcategories",
+            "label": "Subcategory",
+            "values": [
+                {
+                    "value": "subcategory-aggregators_and_integrators-aggregators_and_integrators-data",
+                    "count": 2,
+                    "label": "Data"
+                },
+                {
+                    "value": "subcategory-aggregators_and_integrators-aggregators_and_integrators-applications",
+                    "count": 1,
+                    "label": "Applications"
+                },
+                {
+                    "value": "subcategory-processing_and_analysis-data_management-discovery",
+                    "count": 1,
+                    "label": "Discovery"
+                },
+                {
+                    "value": "subcategory-sharing_and_discovery-software-software_repository",
+                    "count": 1,
+                    "label": "Software Repository"
+                },
+                {
+                    "value": "subcategory-training_and_support-consultancy_and_support-other",
+                    "count": 1,
+                    "label": "Other"
+                },
+                {
+                    "value": "subcategory-training_and_support-education_and_training-required_training",
+                    "count": 1,
+                    "label": "Required Training"
+                }
+            ]
+        },
+        {
+            "field": "tags",
+            "label": "Tag",
+            "values": [
+                {
+                    "value": "SSHOC",
+                    "count": 3,
+                    "label": "SSHOC"
+                },
+                {
+                    "value": "DDI",
+                    "count": 2,
+                    "label": "DDI"
+                },
+                {
+                    "value": "Data-archive",
+                    "count": 2,
+                    "label": "Data-Archive"
+                },
+                {
+                    "value": " Harmonised-data-descriptions",
+                    "count": 1,
+                    "label": " Harmonised-Data-Descriptions"
+                },
+                {
+                    "value": "Controlled-Vocabularies",
+                    "count": 1,
+                    "label": "Controlled-Vocabularies"
+                },
+                {
+                    "value": "Data-catalogue",
+                    "count": 1,
+                    "label": "Data-Catalogue"
+                },
+                {
+                    "value": "Data-discovery",
+                    "count": 1,
+                    "label": "Data-Discovery"
+                },
+                {
+                    "value": "Data-management",
+                    "count": 1,
+                    "label": "Data-Management"
+                },
+                {
+                    "value": "Data-publication",
+                    "count": 1,
+                    "label": "Data-Publication"
+                },
+                {
+                    "value": "Data-repository",
+                    "count": 1,
+                    "label": "Data-Repository"
+                },
+                {
+                    "value": "FAIR",
+                    "count": 1,
+                    "label": "FAIR"
+                },
+                {
+                    "value": "Metadata",
+                    "count": 1,
+                    "label": "Metadata"
+                },
+                {
+                    "value": "Multilingual-Vocabulary-service",
+                    "count": 1,
+                    "label": "Multilingual-Vocabulary-Service"
+                },
+                {
+                    "value": "OAIS",
+                    "count": 1,
+                    "label": "OAIS"
+                },
+                {
+                    "value": "Ontology",
+                    "count": 1,
+                    "label": "Ontology"
+                },
+                {
+                    "value": "Resource-Discovery",
+                    "count": 1,
+                    "label": "Resource-Discovery"
+                },
+                {
+                    "value": "Thesaurus",
+                    "count": 1,
+                    "label": "Thesaurus"
+                },
+                {
+                    "value": "Validation",
+                    "count": 1,
+                    "label": "Validation"
+                },
+                {
+                    "value": "Vocabulary-management",
+                    "count": 1,
+                    "label": "Vocabulary-Management"
+                },
+                {
+                    "value": "collaboration",
+                    "count": 1,
+                    "label": "Collaboration"
+                },
+                {
+                    "value": "metadata",
+                    "count": 1,
+                    "label": "Metadata"
+                },
+                {
+                    "value": "storage",
+                    "count": 1,
+                    "label": "Storage"
+                }
+            ]
+        },
+        {
+            "field": "terms_of_use",
+            "label": "Terms of Use",
+            "values": [
+                {
+                    "value": "https://www.cessda.eu/Acceptable-Use-Policy",
+                    "count": 7,
+                    "label": "Https://www.cessda.eu/Acceptable-Use-Policy"
+                }
+            ]
+        },
+        {
+            "field": "trl",
+            "label": "TRL",
+            "values": [
+                {
+                    "value": "trl-8",
+                    "count": 6,
+                    "label": "8 - system complete and qualified"
+                },
+                {
+                    "value": "trl-7",
+                    "count": 1,
+                    "label": "7 - system prototype demonstration in operational environment"
+                }
+            ]
+        },
+        {
+            "field": "type",
+            "label": "Type",
+            "values": [
+                {
+                    "value": "Service",
+                    "count": 7,
+                    "label": "Service"
+                }
+            ]
+        },
+        {
+            "field": "urls",
+            "label": "Urls",
+            "values": [
+                {
+                    "value": "https://dag.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://dag.cessda.eu/"
+                },
+                {
+                    "value": "https://datacatalogue.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://datacatalogue.cessda.eu/"
+                },
+                {
+                    "value": "https://dmeg.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://dmeg.cessda.eu/"
+                },
+                {
+                    "value": "https://thesauri.cessda.eu/elsst-6/en/",
+                    "count": 1,
+                    "label": "Https://thesauri.cessda.eu/elsst-6/en/"
+                },
+                {
+                    "value": "https://workspace.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://workspace.cessda.eu/"
+                },
+                {
+                    "value": "https://www.cessda.eu/Tools/Metadata-Validator",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Tools/Metadata-Validator"
+                },
+                {
+                    "value": "https://www.cessda.eu/Tools/Vocabulary-Service",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Tools/Vocabulary-Service"
+                }
+            ]
+        },
+        {
+            "field": "webpage",
+            "label": "Webpage",
+            "values": [
+                {
+                    "value": "https://cmv.cessda.eu/#!validation",
+                    "count": 1,
+                    "label": "Https://cmv.cessda.eu/#!validation"
+                },
+                {
+                    "value": "https://workspace.cessda.eu/",
+                    "count": 1,
+                    "label": "Https://workspace.cessda.eu/"
+                },
+                {
+                    "value": "https://www.cessda.eu/Tools/Data-Catalogue",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Tools/Data-Catalogue"
+                },
+                {
+                    "value": "https://www.cessda.eu/Tools/ELSST-Thesaurus",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Tools/ELSST-Thesaurus"
+                },
+                {
+                    "value": "https://www.cessda.eu/Tools/Vocabulary-Service",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Tools/Vocabulary-Service"
+                },
+                {
+                    "value": "https://www.cessda.eu/Training/DAG",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Training/DAG"
+                },
+                {
+                    "value": "https://www.cessda.eu/Training/DMEG",
+                    "count": 1,
+                    "label": "Https://www.cessda.eu/Training/DMEG"
+                }
+            ]
+        }
+    ]
+}

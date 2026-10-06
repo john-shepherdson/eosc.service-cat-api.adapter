@@ -3,10 +3,10 @@
 
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below." 
-title: "<REPO_NAME>"
+title: "eosc.service-cat-api.adapter"
 type: software
 doi: 10.5281/zenodo.000000
-url: "https://github.com/john-shepherdson/<REPO_NAME>.git"
+url: "https://github.com/john-shepherdson/eosc.service-cat-api.adapter.git"
 authors:
   - given-names: "John"
     family-names: "Shepherdson"

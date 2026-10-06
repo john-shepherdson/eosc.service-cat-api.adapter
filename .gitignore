@@ -61,3 +61,7 @@ nbdist/
 .nb-gradle/
 .vscode/
 bin/
+
+# Generated adapter output (keep the directory, ignore its contents)
+outputs/*
+!outputs/.gitkeep
