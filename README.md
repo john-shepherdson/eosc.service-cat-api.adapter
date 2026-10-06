@@ -42,8 +42,11 @@ category vocabulary.
 1. Build the executable jar (this also runs the tests):
 
    ```bash
-   mvn package
+   mvn clean package
    ```
+
+   Use `clean`: building again without it shades the jar from the previous
+   build, which floods the log with overlap warnings.
 
 1. Run the adapter:
 
