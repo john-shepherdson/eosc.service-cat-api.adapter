@@ -76,7 +76,7 @@ class AdapterTest {
     }
 
     @Test
-    void invalidServiceIsRejectedNotEmitted() throws IOException {
+    void invalidServiceIsRejectedNotEmitted() {
         var broken = (com.fasterxml.jackson.databind.node.ObjectNode) source.deepCopy();
         ((com.fasterxml.jackson.databind.node.ObjectNode) broken.get("results").get(0)).put("trl", "trl-99");
         var result = new Adapter(AdapterConfig.defaults(), validator).convert(broken);

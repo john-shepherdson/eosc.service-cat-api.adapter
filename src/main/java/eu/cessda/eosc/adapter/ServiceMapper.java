@@ -29,7 +29,15 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 /** Converts one EOSC Beyond service description into an EOSC Federation EOSCServiceBundle. */
 public final class ServiceMapper {
 
-    private static final Pattern EMAIL = Pattern.compile("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$");
+    private static final String ID = "id";
+    private static final String NAME = "name";
+    private static final String TRL = "trl";
+    private static final String ORDER_TYPE = "orderType";
+    private static final String ACCESS_MODES = "accessModes";
+    /** Value of default.tagline meaning "use the service name". */
+    private static final String TAGLINE_FROM_NAME = "name";
+
+    private static final Pattern EMAIL = Pattern.compile("^[^@\\s]++@[^@\\s.]++(?:\\.[^@\\s.]++)++$");
     private static final Pattern TAGS = Pattern.compile("<[^>]*>");
 
     private final ObjectMapper om = new ObjectMapper();
@@ -41,34 +49,34 @@ public final class ServiceMapper {
 
     public ObjectNode map(JsonNode src) {
         var s = om.createObjectNode();
-        var id = text(src, "id");
-        putIfPresent(s, "id", id);
+        var id = text(src, ID);
+        putIfPresent(s, ID, id);
         putArrayIfAny(s, "alternativeIdentifiers", alternativeIdentifiers(src), true);
         putIfPresent(s, "abbreviation", text(src, "abbreviation"));
-        putIfPresent(s, "name", text(src, "name"));
-        putIfPresent(s, "webpage", firstNonNull(text(src, "webpage"), firstText(src.get("urls"))));
+        putIfPresent(s, NAME, text(src, NAME));
+        putIfPresent(s, "webpage", firstNonNull(text(src, "webpage"), firstText(src.path("urls"))));
         putIfPresent(s, "description", description(src));
         putIfPresent(s, "tagline", tagline(src));
         putIfPresent(s, "logo", text(src, "logo"));
-        s.set("scientificDomains", pairs(src.get("scientificDomains"),
+        s.set("scientificDomains", pairs(src.path("scientificDomains"),
                 "scientificDomain", "scientificSubdomain", "scientificDomain", "scientificSubdomain"));
-        s.set("categories", pairs(src.get("categories"),
+        s.set("categories", pairs(src.path("categories"),
                 "category", "subcategory", "category", "subcategory"));
         s.set("targetUsers", strings(config.list("default.targetUsers")));
-        putArrayIfAny(s, "accessModes", accessModes(src), false);
-        s.set("tags", tags(src.get("tags")));
+        putArrayIfAny(s, ACCESS_MODES, accessModes(src), false);
+        s.set("tags", tags(src.path("tags")));
         s.set("languageAvailabilities", strings(config.list("default.languageAvailabilities")));
         putIfPresent(s, "helpdeskEmail", helpdesk(src));
         putIfPresent(s, "securityContactEmail", null);
-        putIfPresent(s, "trl", mapped("trl", text(src, "trl")));
+        putIfPresent(s, TRL, mapped(TRL, text(src, TRL)));
         putIfPresent(s, "userManual", text(src, "userManual"));
         putIfPresent(s, "termsOfUse", text(src, "termsOfUse"));
         putIfPresent(s, "privacyPolicy", text(src, "privacyPolicy"));
         putIfPresent(s, "accessPolicy", text(src, "accessPolicy"));
-        putIfPresent(s, "orderType", mapped("orderType", text(src, "orderType")));
+        putIfPresent(s, ORDER_TYPE, mapped(ORDER_TYPE, text(src, ORDER_TYPE)));
 
         var bundle = om.createObjectNode();
-        putIfPresent(bundle, "id", id);
+        putIfPresent(bundle, ID, id);
         bundle.set("service", s);
         return bundle;
     }
@@ -92,7 +100,7 @@ public final class ServiceMapper {
         if (explicit != null) {
             return explicit;
         }
-        return "name".equals(config.get("default.tagline")) ? text(src, "name") : config.get("default.tagline");
+        return TAGLINE_FROM_NAME.equals(config.get("default.tagline")) ? text(src, NAME) : config.get("default.tagline");
     }
 
     private String helpdesk(JsonNode src) {
@@ -100,12 +108,9 @@ public final class ServiceMapper {
         if (explicit != null) {
             return explicit;
         }
-        var contacts = src.get("publicContacts");
-        if (contacts != null && contacts.isArray()) {
-            for (var c : contacts) {
-                if (c.isTextual() && EMAIL.matcher(c.asText().trim()).matches()) {
-                    return c.asText().trim();
-                }
+        for (var c : src.path("publicContacts")) {
+            if (c.isTextual() && EMAIL.matcher(c.asText().trim()).matches()) {
+                return c.asText().trim();
             }
         }
         return null;
@@ -114,14 +119,13 @@ public final class ServiceMapper {
     private List<JsonNode> alternativeIdentifiers(JsonNode src) {
         var out = new ArrayList<JsonNode>();
         var seen = new LinkedHashSet<String>();
-        var pids = src.get("alternativePIDs");
-        if (pids != null && pids.isArray()) {
+        var pids = src.path("alternativePIDs");
+        if (pids.isArray()) {
             for (var p : pids) {
-                String type = null;
+                String type = "other";
                 String value = null;
                 if (p.isTextual()) {
                     value = p.asText();
-                    type = "other";
                 } else if (p.isObject()) {
                     // Beyond's shape is undocumented for non-null values; accept the usual spellings.
                     value = firstNonNull(text(p, "value"), text(p, "pid"), text(p, "PID"), text(p, "identifier"));
@@ -144,7 +148,7 @@ public final class ServiceMapper {
     }
 
     private List<JsonNode> accessModes(JsonNode src) {
-        var raw = firstNonNull(src.get("accessModes"), src.get("accessTypes"));
+        var raw = src.hasNonNull(ACCESS_MODES) ? src.get(ACCESS_MODES) : src.path("accessTypes");
         var out = new ArrayList<JsonNode>();
         var seen = new LinkedHashSet<String>();
         for (var v : asList(raw)) {
@@ -216,7 +220,7 @@ public final class ServiceMapper {
     }
 
     private static String text(JsonNode n, String field) {
-        var v = n == null ? null : n.get(field);
+        var v = n.get(field);
         if (v == null || v.isNull() || !v.isValueNode()) {
             return null;
         }

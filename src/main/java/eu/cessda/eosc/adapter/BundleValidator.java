@@ -28,6 +28,8 @@ import com.networknt.schema.SpecVersion;
 /** Validates bundles against EOSCServiceBundle in the target OpenAPI document. */
 public final class BundleValidator {
 
+    private static final String COMPONENTS = "components";
+
     private final JsonSchema schema;
 
     public BundleValidator(JsonNode openApi) {
@@ -35,10 +37,10 @@ public final class BundleValidator {
         ((com.fasterxml.jackson.databind.node.ObjectNode) root).removeAll();
         var wrapper = (com.fasterxml.jackson.databind.node.ObjectNode) root;
         wrapper.put("$ref", "#/components/schemas/EOSCServiceBundle");
-        wrapper.set("components", openApi.get("components"));
+        wrapper.set(COMPONENTS, openApi.get(COMPONENTS));
         // "components" only holds the definitions reached through $ref; it is not a validation keyword.
         var metaSchema = JsonMetaSchema.builder(JsonMetaSchema.getV202012())
-                .keyword(new NonValidationKeyword("components"))
+                .keyword(new NonValidationKeyword(COMPONENTS))
                 .build();
         var factory = JsonSchemaFactory.builder(JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V202012))
                 .metaSchema(metaSchema)

@@ -1,4 +1,4 @@
-[![SQA badge](https://api.eu.badgr.io/public/assertions/<SQAaaS image ID>/image)](https://api.eu.badgr.io/public/badges/<SQAaaS badge ID>)
+[![SQAaaS badge shields.io](https://img.shields.io/badge/sqaaas%20software-silver-lightgrey)](https://sqaaas.eosc-synergy.eu/full-assessment/report/https://raw.githubusercontent.com/eosc-synergy/eosc.service-cat-api.adapter.git.assess.sqaaas/main/.report/assessment_output.json "SQAaaS silver badge achieved")
 
 # EOSC Service Catalogue API Adapter
 
@@ -28,7 +28,7 @@ Services that fail validation are excluded from the output and reported with the
 1. Run the adapter:
 
    ```bash
-   java -jar target/eosc-adapter-0.1.0-SNAPSHOT.jar \
+   java -jar target/eosc-adapter-0.2.0.jar \
      --source https://service-catalogue-staging.beyond.cessda.eu/api/service/all \
      --output services.json
    ```

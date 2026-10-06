@@ -29,9 +29,13 @@ import java.time.Duration;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** Command line entry point. */
 public final class Main {
+
+    private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 
     private static final String DEFAULT_SCHEMA = "https://srvcat.cloud.cesnet.cz/openapi.json";
     private static final String USAGE = """
@@ -54,23 +58,20 @@ public final class Main {
         Path output = Path.of("services.json");
         Path outDir = Path.of("outputs");
         boolean strict = false;
-        for (int i = 0; i < args.length; i++) {
-            switch (args[i]) {
-                case "--source" -> source = args[++i];
-                case "--schema" -> schema = args[++i];
-                case "--config" -> config = Path.of(args[++i]);
-                case "--output" -> output = Path.of(args[++i]);
-                case "--outdir" -> outDir = Path.of(args[++i]);
+        var it = java.util.Arrays.asList(args).iterator();
+        while (it.hasNext()) {
+            switch (it.next()) {
+                case "--source" -> source = value(it);
+                case "--schema" -> schema = value(it);
+                case "--config" -> config = Path.of(value(it));
+                case "--output" -> output = Path.of(value(it));
+                case "--outdir" -> outDir = Path.of(value(it));
                 case "--strict" -> strict = true;
-                default -> {
-                    System.err.print(USAGE);
-                    System.exit(1);
-                }
+                default -> usageAndExit();
             }
         }
         if (source == null) {
-            System.err.print(USAGE);
-            System.exit(1);
+            usageAndExit();
         }
 
         var om = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
@@ -82,16 +83,26 @@ public final class Main {
             Files.createDirectories(target.getParent());
         }
         Files.writeString(target, om.writeValueAsString(result.response()));
-        System.err.println("Wrote " + target);
-        System.err.printf("Converted %d service(s), rejected %d%n",
+        LOG.info("Wrote {}", target);
+        LOG.info("Converted {} service(s), rejected {}",
                 result.response().get("results").size(), result.rejected().size());
-        result.rejected().forEach((id, errs) -> {
-            System.err.println("REJECTED " + id);
-            errs.forEach(e -> System.err.println("  - " + e));
-        });
+        result.rejected().forEach((id, errs) -> LOG.warn("REJECTED {}: {}", id, String.join("; ", errs)));
         if (strict && !result.rejected().isEmpty()) {
             System.exit(2);
         }
+    }
+
+    /** Returns the value following an option, or prints the usage and exits if it is missing. */
+    private static String value(java.util.Iterator<String> it) {
+        if (!it.hasNext()) {
+            usageAndExit();
+        }
+        return it.next();
+    }
+
+    private static void usageAndExit() {
+        LOG.error("{}", USAGE);
+        System.exit(1);
     }
 
     static JsonNode read(ObjectMapper om, String location) throws IOException, InterruptedException {
