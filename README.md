@@ -1,4 +1,4 @@
-# EOSC Service Catalogue API Adapter
+# EOSC Beyond Service Catalogue API Adapter
 
 [![SQAaaS badge shields.io](https://img.shields.io/badge/sqaaas%20software-silver-lightgrey)](https://sqaaas.eosc-synergy.eu/full-assessment/report/https://raw.githubusercontent.com/eosc-synergy/eosc.service-cat-api.adapter.git.assess.sqaaas/main/.report/assessment_output.json "SQAaaS silver badge achieved")
 

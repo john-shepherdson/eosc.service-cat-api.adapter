@@ -102,7 +102,7 @@ class AdapterTest {
     }
 
     @Test
-    void v2FallsBackToCategoryWhenSubcategoryHasNoEntry() throws IOException {
+    void v2FallsBackToCategoryWhenSubcategoryHasNoEntry() {
         var copy = source.get("results").get(4).deepCopy();
         ((ObjectNode) copy.get("categories").get(0)).put("subcategory",
                 "subcategory-processing_and_analysis-data_management-annotation");
